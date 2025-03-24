@@ -12,4 +12,5 @@ document.getElementById('rand-btn').addEventListener('click', () => {
             rule.style.backgroundImage = 'url(assets/imgs/img' + num + '.jpeg)';
         }
     }
+    document.documentElement.requestFullscreen();
 });
