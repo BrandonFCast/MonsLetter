@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+HU:wght@100..400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Playwrite HU", cursive;
+}
+
+body {
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+#bg-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+#bg-container::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url(assets/imgs/img2.jpeg);
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    transition: 1s;
+
+    mask-image: url('assets/imgs/effect.gif');
+    mask-size: cover;
+    mask-position: center;
+}
+#letter-container {
+    background-color: #0008;
+    border-radius: 10px;
+    padding: 20px;
+    z-index: 10;
+    position: relative;
+}
+.letter {
+    color: #ddd;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    transform: scaleY(1);
+
+    overflow: hidden;
+    transition: 1s;
+}
+
+#rand-btn {
+    background-color: #b11c1c;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .2s;
+    position: absolute;
+    bottom: -60px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+#rand-btn:active {
+    transform: scale(0.9);
+}
